@@ -1,0 +1,742 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: transparent;
+}
+
+ body {
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(110,0,150,0.4), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(80,0,120,0.3), transparent 60%),
+    linear-gradient(135deg, #080010, #1a0026, #000000);
+  background-attachment: fixed;
+}
+
+/*Banner*/
+header{
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    height: 190px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.texto-introduccion{
+    color:rgba(255, 255, 255, 0.925);
+    justify-content:center;
+    text-align: center;
+    font-family:"DM Serif Display" ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 auto;
+    width: 1000x;
+    font-size: 20px;
+    padding: 40px 40px;
+    background-color: rgba(0, 0, 0, 0.719);
+    border-radius: 2px;
+}
+
+/*Opciones*/
+
+.navegador{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height: auto;
+    gap:20px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/* -------------- Estos bloques de código son solo para los 3 botones interactivos --------- */
+
+.boton {
+    height: 313px;
+    width: 313px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 0, 0, 70%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+}
+
+.boton h3 {
+    font-size: 26px;
+    margin: 60px 0px 15px 0px;
+    color: #ff546e;
+    font-family:"DM Serif Display" ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Texto descriptivo */
+.boton p {
+    font-size: 16px;
+    margin: 30px 0px 0px 0px;
+    color: #ffffff;
+    font-family:"Montserrat" ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+/* -------------- El fin de los botones --------- */
+
+/*Fondo*/
+
+#video-fondo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;   
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2; 
+}
+
+#filtro-violeta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(14, 0, 13, 0.83);
+    z-index: -1;
+}   
+
+
+footer{
+    color:white;
+    background-color: rgba(0, 0, 0, 0.363);
+}
+
+
+/* PAGINA DE POKEMONES */
+
+.titulo{
+        display:block;
+        color:aliceblue;
+        text-align:center;
+    }
+
+    .detalle{
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: transform 0.7s ease;
+    }
+
+    .detalle:hover{
+        transform: translate(5px, -5px);
+    }
+
+    .padre {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;     
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;         
+    } 
+    .tarjeta{
+        background-color: rgba(200, 200, 200, 0.3);
+        height: 250px;
+        width: 250px;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        justify-content: start;
+        gap: 8px
+    }
+
+    .tarjeta h3, .tarjeta p, .tipo{
+        color:aliceblue;
+    }
+
+    .tarjeta img {
+    width: 96px;
+    height: 96px;
+    }
+
+/* PAGINA DE MOVIMIENTOS */
+
+    .titulo{
+        display:block;
+        color:aliceblue;
+        text-align:center;
+        margin-top: 20px;
+    }
+
+    .detalle{
+        text-decoration: none;
+        color: inherit; 
+        display: block;
+        transition: transform 0.7s ease;
+    }
+
+    .detalle:hover{
+        transform: translate(5px, -5px);
+    }
+
+    .padre-mov {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;     
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+    } 
+
+    .tarjeta-mov {
+        background-color: rgba(200, 200, 200, 0.3);
+        height: auto; 
+        min-height: 350px;
+        width: 260px;
+        padding: 20px 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        justify-content: flex-start;
+        gap: 12px; 
+        transition: background-color 0.3s ease;
+    }
+
+    .stats-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 8px;
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+
+    .stat-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+    }
+
+    .stat-valor {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: aliceblue;
+    }
+
+    .efecto-texto {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        line-height: 1.4;
+        margin: 0;
+        font-style: normal;
+    }
+
+    .tarjeta-mov h3 {
+        color: aliceblue;
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .id-movimiento {
+        color: aliceblue !important;
+        margin: 0;
+    }
+
+    .tipo-mov {
+        display: flex;       
+        align-items: center; 
+        gap: 10px;          
+        color: aliceblue;
+        font-weight: bold;
+        font-size: 1.1rem;
+        background-color: rgba(0,0,0,0.2); 
+        padding: 5px 15px;
+        border-radius: 20px;
+    }
+
+    .icono-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* .categoria-mov {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        background-color: rgba(255, 84, 110, 0.2);
+        padding: 4px 12px;
+        border-radius: 20px;
+        color: aliceblue;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        width: fit-content;
+    } */
+
+    .categoria-mov{
+        display: flex;       
+        align-items: center; 
+        gap: 10px;          
+        color: aliceblue;
+        font-weight: bold;
+        font-size: 1.1rem;
+        background-color: rgba(0,0,0,0.2); 
+        padding: 5px 15px;
+        border-radius: 20px;
+    }
+
+/* neon */ 
+:root {
+    --color-neon: rgba(180, 60, 255, 1);
+}
+
+.borde-neon {
+    background-color: var(--bg-caja-oscura);
+    backdrop-filter: blur(5px); 
+
+    border-radius: 20px;
+
+    border: 2px solid var(--color-neon);
+
+    box-shadow: 0 0 25px var(--color-neon);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.borde-neon:hover {
+      box-shadow: 0 0 40px var(--color-neon), inset 0 0 10px var(--color-neon);
+      border-color: lighten(var(--color-neon), 10%);
+}
+
+
+
+/* ---------- Mostrar movimiento por id--------*/
+    :global(body) {
+        font-family:
+            system-ui,
+            -apple-system,
+            sans-serif;
+    }
+
+    .contenedor-principal {
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .tarjeta-maestra {
+        background-color: rgba(30, 30, 40, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        max-width: 700px;
+        border-radius: 20px;
+        padding: 30px;
+        color: aliceblue;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .nombre-mov {
+        margin: 0;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .id-mov {
+        color: aliceblue;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+
+    .grilla-info {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+    }
+
+    .sub-tarjeta {
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 12px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s;
+    }
+
+    .sub-tarjeta:hover {
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .label-box {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        opacity: 0.6;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .tipo-box {
+        grid-column: span 3;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        padding-left: 30px;
+        justify-content: start;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .categoria-box {
+        grid-column: span 3;
+
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+.contenido-cat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .icono-cat {
+        width: 35px;
+        height: auto;
+    }
+
+    .nombre-cat {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: aliceblue;
+    }
+
+
+    .contenido-tipo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .icono-tipo {
+        width: 50px;
+        height: 50px;
+    }
+    .texto-tipo {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .nombre-tipo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .id-tipo-badge {
+        font-size: 0.8rem;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 2px 8px;
+        border-radius: 10px;
+        color: #aaa;
+    }
+
+    .stat-box {
+        grid-column: span 2;
+
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 12px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .valor-stat {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .descripcion-box {
+        grid-column: span 6;
+
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 25px;
+        min-height: 100px;
+    }
+
+    .texto-descripcion {
+        font-size: 1.2rem;
+        font-style: italic;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+
+    /* LISTAR POKEMONES*/
+
+    .tipo {
+    background: #8a2be2;
+    padding: 5px 12px;
+    border-radius: 12px;
+    margin-right: 6px;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+/* -------------------buscador--------------*/
+.buscador-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buscador {
+    width: 250px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #e7d7ff;
+    background: rgba(40, 0, 60, 0.6);
+
+    border: 2px solid #8a2be2;
+    border-radius: 12px;
+
+    outline: none;
+    font-size: 1.1rem;
+    box-shadow:
+        0 0 10px #8a2be2cc,
+        0 0 25px #300040aa;
+
+    transition: 0.25s ease;
+}
+
+
+
+.buscador:focus{
+    background: rgba(80, 10, 110, 0.75);
+    border-color: #c56aff;
+
+    box-shadow:
+        0 0 15px #c56aff,
+        0 0 35px #8a2be2,
+        0 0 60px #300040;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: 2px solid #8a2be2;
+    background: transparent;
+    color: #e7d7ff;
+
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+
+    box-shadow:
+        0 0 8px #8a2be2,
+        0 0 18px #300040;
+}
+
+.btn:hover {
+    background: #8a2be2;
+    box-shadow:
+        0 0 12px #c56aff,
+        0 0 25px #8a2be2,
+        0 0 45px #300040;
+}
+.select-tipo {
+    width: 130px; 
+    cursor: pointer;
+}
+    
+.select-tipo option {
+    background-color: #1a0026;
+    color: white;
+}
+.input-stat {
+        width: 110px;
+}
+/* -------------fin de buscador--------*/
+
+
+
+/*POKEMON DETALLADO */
+
+    .container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    }
+
+.titulo {
+    text-align: center;
+    color: #e7d7ff;
+    font-size: 3rem;
+    text-shadow: 0 0 18px #b75cff;
+    margin: 20px 0;
+}
+
+/* TARJETA PRINCIPAL */
+.tarjeta-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(60, 0, 80, 0.35);
+    border: 2px solid #8a2be2;
+    border-radius: 15px;
+    padding: 20px;
+    gap: 25px;
+    box-shadow: 0 0 25px #4a0077aa;
+}
+
+.imagen {
+    width: 160px;
+    height: 160px;
+    filter: drop-shadow(0 0 15px #ba55ff);
+}
+
+.info-basica {
+    color: #e7d7ff;
+    font-size: 1.2rem;
+}
+
+.tipos {
+    margin-top: 10px;
+}
+
+.tipo {
+    background: #8a2be2;
+    padding: 5px 12px;
+    border-radius: 12px;
+    margin-right: 6px;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+/* ESTADISTICAS */
+.subtitulo {
+    color: #e7d7ff;
+    margin: 30px 0 10px 0;
+    text-align: center;
+    text-shadow: 0 0 15px #b75cff;
+}
+
+.stats {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #f1d9ff;
+}
+
+.stat label {
+    width: 160px;
+}
+
+.barra {
+    width: 300px;
+    height: 12px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.llenado {
+    height: 100%;
+    background: linear-gradient(90deg, #9b30ff, #d575ff);
+    border-radius: 10px;
+    transition: width 0.6s ease;
+}
+
+.valor {
+    width: 40px;
+    text-align: right;
+}
+
+/* EVOLUCIONES */
+.contenedor-evo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.tarjeta-evo {
+    background: rgba(80, 0, 110, 0.4);
+    padding: 15px;
+    border-radius: 12px;
+    width: 150px;
+    text-align: center;
+    border: 2px solid #8a2be2;
+    text-decoration: none;
+    color: #e7d7ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-evo img {
+    width: 96px;
+    height: 96px;
+}
+
+.tarjeta-evo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px #b75cffaa;
+}
+
+.no-evo {
+    text-align: center;
+    color: #ddd;
+}
+
+/* MOVIMIENTOS */
+.movimientos {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mov {
+    background: rgba(255,255,255,0.12);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #8a2be2;
+    color: #e7d7ff;
+}
+
+.mov summary {
+    cursor: pointer;
+    font-size: 1.15rem;
+}
+
