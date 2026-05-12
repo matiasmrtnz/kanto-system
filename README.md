@@ -1,6 +1,9 @@
+Este es un trabajo de la materia de Intro a Desarrollo de Software - 2026c2
+
 # 🧩 Kanto Systems - Gestión de Pokémon
 
 Kanto Systems es una aplicación que permite gestionar Pokémon, movimientos y equipos. Cuenta con un backend en FastAPI y un frontend en Svelte, y expone una API REST para interactuar con los datos.
+
 
 ---
 
