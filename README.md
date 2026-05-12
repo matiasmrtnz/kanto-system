@@ -20,6 +20,8 @@ Kanto Systems es una aplicación que permite gestionar Pokémon, movimientos y e
 ---
 
 ## 📁 Estructura de Carpetas
+
+```
 kanto-systems/
 │
 ├── backend/
@@ -43,11 +45,9 @@ kanto-systems/
 │   ├── package.json
 │   └── package-lock.json
 │
-├── .gitignore                     # Ignora archivos temporales
-└── README.md                      # Documentación general
-
----
-
+├── .gitignore
+└── README.md
+```
 ## ⚙️ Instalación
 
 ### Backend
